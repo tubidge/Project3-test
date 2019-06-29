@@ -1,0 +1,25 @@
+.profile-pic {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.profile-container {
+    margin: 20px;
+}
+
+h4.profile-name {
+    text-align: center;
+}
+
+.info-container {
+    background-color: rgb(232, 235, 238);
+
+}
+.top-row {
+    height: 80px;
+}
+
+.button {
+    text-align: center;
+}

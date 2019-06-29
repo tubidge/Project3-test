@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/d91fa56bef.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Home Page</title>
+    <style>
+      html,
+      body,
+      header,
+      #intro {
+        height: 100%;
+      }
+
+      #intro {
+        background: url("people.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      body {
+        font-family: "Varela Round", sans-serif;
+      }
+
+      .form-control {
+        box-shadow: none;
+        font-weight: normal;
+        font-size: 13px;
+      }
+
+      .form-control:focus {
+        border-color: #33cabb;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-header.col {
+        padding: 0 !important;
+      }
+
+      .navbar {
+        background: #fff;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-bottom: 1px solid #dfe3e8;
+        border-radius: 0;
+      }
+
+      .nav-link img {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        margin: -8px 0;
+        float: left;
+        margin-right: 10px;
+      }
+
+      .navbar .navbar-brand,
+      .navbar .navbar-brand:hover,
+      .navbar .navbar-brand:focus {
+        padding-left: 0;
+        font-size: 20px;
+        padding-right: 50px;
+      }
+
+      .navbar .navbar-brand b {
+        font-weight: bold;
+        color: #33cabb;
+      }
+
+      .navbar .form-inline {
+        display: inline-block;
+      }
+
+      .navbar .nav li {
+        position: relative;
+      }
+
+      .navbar .nav li a {
+        color: #888;
+      }
+
+      .search-box {
+        position: relative;
+      }
+
+      .search-box input {
+        padding-right: 35px;
+        border-color: #dfe3e8;
+        border-radius: 4px !important;
+        box-shadow: none;
+      }
+
+      .search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px;
+        height: 100%;
+      }
+
+      .search-box i {
+        color: #a0a5b1;
+        font-size: 19px;
+      }
+
+      .navbar .nav .btn-primary,
+      .navbar .nav .btn-primary:active {
+        color: #fff;
+        background: #33cabb;
+        padding-top: 8px;
+        padding-bottom: 6px;
+        vertical-align: middle;
+        border: none;
+      }
+
+      .navbar .nav .btn-primary:hover,
+      .navbar .nav .btn-primary:focus {
+        color: #fff;
+        outline: none;
+        background: #31bfb1;
+      }
+
+      .navbar .navbar-right li:first-child a {
+        padding-right: 30px;
+      }
+
+      .navbar .nav-item i {
+        font-size: 18px;
+      }
+
+      .navbar .dropdown-item i {
+        font-size: 16px;
+        min-width: 22px;
+      }
+
+      .navbar ul.nav li.active a,
+      .navbar ul.nav li.open > a {
+        background: transparent !important;
+      }
+
+      .navbar .nav .get-started-btn {
+        min-width: 120px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .navbar ul.nav li.open > a.get-started-btn {
+        color: #fff;
+      }
+
+      .navbar .dropdown-menu {
+        border-radius: 1px;
+        border-color: #e5e5e5;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar .nav .dropdown-menu li {
+        color: #999;
+        font-weight: normal;
+      }
+
+      .navbar .nav .dropdown-menu li a,
+      .navbar .nav .dropdown-menu li a:hover,
+      .navbar .nav .dropdown-menu li a:focus {
+        padding: 8px 20px;
+        line-height: normal;
+      }
+
+      .navbar .navbar-form {
+        border: none;
+      }
+
+      .navbar .dropdown-menu.form-wrapper {
+        width: 280px;
+        padding: 20px;
+        left: auto;
+        right: 0;
+        font-size: 14px;
+      }
+
+      .navbar .dropdown-menu.form-wrapper a {
+        color: #33cabb;
+        padding: 0 !important;
+      }
+
+      .navbar .dropdown-menu.form-wrapper a:hover {
+        text-decoration: underline;
+      }
+
+      .navbar .form-wrapper .hint-text {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 13px;
+      }
+
+      .navbar .form-wrapper .social-btn .btn,
+      .navbar .form-wrapper .social-btn .btn:hover {
+        color: #fff;
+        margin: 0;
+        padding: 0 !important;
+        font-size: 13px;
+        border: none;
+        transition: all 0.4s;
+        text-align: center;
+        line-height: 34px;
+        width: 47%;
+        text-decoration: none;
+      }
+
+      .navbar .social-btn .btn-primary {
+        background: #507cc0;
+      }
+
+      .navbar .social-btn .btn-primary:hover {
+        background: #4676bd;
+      }
+
+      .navbar .social-btn .btn-info {
+        background: #64ccf1;
+      }
+
+      .navbar .social-btn .btn-info:hover {
+        background: #4ec7ef;
+      }
+
+      .navbar .social-btn .btn i {
+        margin-right: 5px;
+        font-size: 16px;
+        position: relative;
+        top: 2px;
+      }
+
+      .navbar .form-wrapper .form-footer {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 13px;
+      }
+
+      .navbar .form-wrapper .form-footer a:hover {
+        text-decoration: underline;
+      }
+
+      .navbar .form-wrapper .checkbox-inline input {
+        margin-top: 3px;
+      }
+
+      .or-seperator {
+        margin-top: 32px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .or-seperator b {
+        color: #666;
+        padding: 0 8px;
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+        text-align: center;
+        line-height: 26px;
+        background: #fff;
+        display: inline-block;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        position: relative;
+        top: -15px;
+        z-index: 1;
+      }
+
+      .navbar .checkbox-inline {
+        font-size: 13px;
+      }
+
+      .navbar .navbar-right .dropdown-toggle::after {
+        display: none;
+      }
+
+      @media (min-width: 1200px) {
+        .form-inline .input-group {
+          width: 300px;
+          margin-left: 30px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar .dropdown-menu.form-wrapper {
+          width: 100%;
+          padding: 10px 15px;
+          background: transparent;
+          border: none;
+        }
+
+        .navbar .form-inline {
+          display: block;
+        }
+
+        .navbar .input-group {
+          width: 100%;
+        }
+
+        .navbar .nav .btn-primary,
+        .navbar .nav .btn-primary:active {
+          display: block;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      // Prevent dropdown menu from closing when click inside the form
+      $(document).on("click", ".navbar-right .dropdown-menu", function(e) {
+        e.stopPropagation();
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <!--Navbar-->
+
+      <nav
+        class="navbar navbar-default fixed-top navbar-expand-lg navbar-light"
+      >
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Goal<b>Done</b></a>
+          <button
+            type="button"
+            data-target="#navbarCollapse"
+            data-toggle="collapse"
+            class="navbar-toggle navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--/.Navbar-->
+      <!--Mask-->
+      <div id="intro" class="view pt-3">
+        <div class="mask rgba-black-strong">
+          <div
+            class="container-fluid d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-md-12">
+                <!-- Heading -->
+                <h2
+                  class="display-4 font-weight-bold white-text pt-5 mt-3 mb-2"
+                >
+                  GoalDone
+                </h2>
+
+                <!-- Divider -->
+                <hr class="hr-light" />
+
+                <!-- Description -->
+                <h4 class="white-text my-4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Deleniti consequuntur.
+                </h4>
+                <button type="button" class="btn btn-info">Learn more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Mask-->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="mt-5">
+      <div class="container">
+        <!--Section: Best Features-->
+        <section id="best-features" class="text-center">
+          <!-- Heading -->
+          <h2 class="mb-5 font-weight-bold">Best Features</h2>
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center mb-4">
+            <!--Grid column-->
+            <div class="col-md-8">
+              <!-- Description -->
+              <p class="grey-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                voluptate hic provident nulla repellat facere esse molestiae
+                ipsa labore porro minima quam quaerat rem, natus repudiandae
+                debitis est sit pariatur.
+              </p>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-4 mb-5">
+              <i class="fa fa-camera-retro fa-4x orange-text"></i>
+              <h4 class="my-4 font-weight-bold">Experience</h4>
+              <p class="grey-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reprehenderit maiores nam, aperiam minima assumenda deleniti
+                hic.
+              </p>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-4 mb-1">
+              <i class="fa fa-heart fa-4x orange-text"></i>
+              <h4 class="my-4 font-weight-bold">Happiness</h4>
+              <p class="grey-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reprehenderit maiores nam, aperiam minima assumenda deleniti
+                hic.
+              </p>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-4 mb-1">
+              <i class="fa fa-bicycle fa-4x orange-text"></i>
+              <h4 class="my-4 font-weight-bold">Adventure</h4>
+              <p class="grey-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reprehenderit maiores nam, aperiam minima assumenda deleniti
+                hic.
+              </p>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!--Section: Best Features-->
+      </div>
+    </main>
+    <!--Main layout-->
+    <!--Footer-->
+    <footer></footer>
+    <!--Footer-->
+  </body>
+</html>
