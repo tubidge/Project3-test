@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 
 function ProfileEdit() {
     return (
@@ -11,33 +11,46 @@ function ProfileEdit() {
                         <img className="profile-pic" src="https://avatars0.githubusercontent.com/u/44684121?s=460&v=4"></img>
                     </div>
                     <div className="row">
-                        <h4 className="profile-name">Username</h4>
+                        <h4 className="profile-name center-align">Username</h4>
                     </div>
                 </div>
                 <div className="col s8 offset-s1">
                     <div className="row top-row">
                         <h4>Edit Profile</h4>
                     </div>
+
                     <div className="row">
-                        <h5>User Info</h5>
+                        <h5>User Info
+                            <div id="button">
+                                <a href="#" className="btn-small">Save Changes</a>
+                            </div>
+                        </h5>
                         <hr />
                     </div>
                     <div className="row">
-                        <div className="col s6">
+                        <div className="col s3">
                             <div className="row">
-                                <b>Name</b>
+                                <b>First Name</b>
                                 <div className="row">
-                                    <div className="col sm-6">
-                                        <input placeholder="Philip Benson" />
+                                    <div className="col">
+                                        <input placeholder="Philip" />
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
                                 <b>User Since</b>
                                 <div className="row">
-                                    <div className="col sm-6">
+                                    <div className="col">
                                         June 29, 2019
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col s3">
+                            <b>Last Name</b>
+                            <div className="row">
+                                <div className="col">
+                                    <input placeholder="Benson" />
                                 </div>
                             </div>
                         </div>
@@ -45,7 +58,7 @@ function ProfileEdit() {
                             <div className="row">
                                 <b>Email</b>
                                 <div className="row">
-                                    <div className="col sm-6">
+                                    <div className="col s12">
                                         <input placeholder="tubidge@gmail.com" />
                                     </div>
                                 </div>
@@ -53,7 +66,7 @@ function ProfileEdit() {
                             <div className="row">
                                 <b>Placeholder</b>
                                 <div className="row">
-                                    <div className="col sm-6">
+                                    <div className="col s6">
                                         Whatever
                                     </div>
                                 </div>

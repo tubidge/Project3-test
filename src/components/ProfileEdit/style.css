@@ -1,3 +1,19 @@
+#save-button {
+    float: right !important;
+}
+
 .switch {
     padding: 0 0 0 10px;
 }
+
+/* .switch label .lever:before {
+    background-color: rgba(166, 53, 38, 0.15) !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: rgba(124, 27, 14, 0.582) !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: rgb(133, 30, 16) !important;
+} */

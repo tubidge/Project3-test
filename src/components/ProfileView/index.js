@@ -11,16 +11,19 @@ function ProfileView() {
                         <img className="profile-pic" src="https://avatars0.githubusercontent.com/u/44684121?s=460&v=4"></img>
                     </div>
                     <div className="row">
-                        <h4 className="profile-name">Username</h4>
-                        <div className="button">
-                            <a href="#" className="btn-small">Edit Profile</a>
-                        </div>
+                        <h4 className="profile-name center-align">Username</h4>
                     </div>
                 </div>
                 <div className="col s8 offset-s1">
-                    <div className="row top-row" />
+                    <div className="row top-row">
+                        <h4>Profile</h4>
+                    </div>
                     <div className="row">
-                        <h5>User Info</h5>
+                        <h5>User Info
+                            <div id="button">
+                                <a href="#" className="btn-small">Edit Profile</a>
+                            </div>
+                        </h5>
                         <hr />
                     </div>
                     <div className="row">

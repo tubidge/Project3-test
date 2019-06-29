@@ -5,17 +5,13 @@
 }
 
 .profile-container {
-    margin: 20px;
-}
-
-h4.profile-name {
-    text-align: center;
+    padding: 80px 0 0 0;
 }
 
 .top-row {
     height: 80px;
 }
 
-.button {
-    text-align: center;
+#button {
+    float: right;
 }
