@@ -1,0 +1,19 @@
+.container {
+    padding: 80px 0 0 0;
+}
+
+.goal-tab {
+    margin: 50px 0 0 0;
+}
+
+.goal-detail {
+    margin: 10px 0 0 0;
+}
+
+.goal-detail-row {
+    margin: 0 !important;
+}
+
+.goal-detail-sublist {
+    /* margin: 10px 0 0 70px; */
+}

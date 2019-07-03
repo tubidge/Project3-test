@@ -38,7 +38,20 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function (event) {
+      var elem1 = document.querySelector('.tabs');
+      var options1 = {}
+      var instance1 = M.Tabs.init(elem1, options1);
+      // var elem2 = document.querySelector('.tabs2');
+      // var options2 = {};
+      // var instance2 = M.Tabs.init(elem2, options2);
+      // var elem3 = document.querySelector('.tabs3');
+      // var options3 = {};
+      // var instance3 = M.Tabs.init(elem3, options3);
+    });
+  </script>
 </body>
 
 </html>
