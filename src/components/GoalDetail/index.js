@@ -2,7 +2,7 @@ import React from "react";
 
 function GoalDetail() {
     return (
-        <div className="card">
+        <div className="card goal-card">
             <div className="card-content">
                 <div className="card-title center-align"><b>Goal Title</b></div>
                 <div className="row goal-detail-row center-align">Due 01/01/2019</div>
@@ -21,6 +21,9 @@ function GoalDetail() {
                                 <li>Milestone 3</li>
                                 <li>Milestone 4</li>
                             </ul>
+                            <button href="#" className="btn-small">
+                                Add Milestone
+                            </button>
                         </div>
                     </div>
 
@@ -35,6 +38,9 @@ function GoalDetail() {
                                 <li>Buddy 3</li>
                                 <li>Buddy 4</li>
                             </ul>
+                            <button href="#" className="btn-small">
+                                Add Buddy
+                            </button>
                         </div>
                     </div>
                 </div>

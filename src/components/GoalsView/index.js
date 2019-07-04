@@ -22,7 +22,7 @@ function GoalsView(props) {
                 </div>
 
                 <div id="test1">
-                    <div className="col s3">
+                    <div className="col s2">
                         <ul className="goal-tabs">
                             <li className="goal-tab center-align"><a href="#goal1-1">Goal 1</a></li>
                             <li className="goal-tab center-align"><a href="#goal1-2">Goal 2</a></li>
@@ -30,23 +30,27 @@ function GoalsView(props) {
                         </ul>
                     </div>
 
-                    <div className="col s8 goal-detail">
+                    <div className="col s10 goal-detail">
                         {props.children}
                     </div>
                 </div>
 
                 <div id="test2">
-                    <div className="col s3">
+                    <div className="col s2">
                         <ul className="goal-tabs">
                             <li className="goal-tab center-align"><a href="#goal2-1">Goal 1</a></li>
                             <li className="goal-tab center-align"><a href="#goal2-2">Goal 2</a></li>
                             <li className="goal-tab center-align"><a href="#goal2-3">Goal 3</a></li>
                         </ul>
                     </div>
+
+                    <div className="col s10 goal-detail">
+                        {props.children}
+                    </div>
                 </div>
 
                 <div id="test3">
-                    <div className="col s3">
+                    <div className="col s2">
                         <ul className="goal-tabs">
                             <li className="goal-tab center-align"><a href="#goal3-1">Goal 1</a></li>
                             <li className="goal-tab center-align"><a href="#goal3-2">Goal 2</a></li>
@@ -56,7 +60,7 @@ function GoalsView(props) {
                 </div>
 
                 <div id="test4">
-                    <div className="col s3">
+                    <div className="col s2">
                         <ul className="goal-tabs">
                             <li className="goal-tab center-align"><a href="#goal4-1">Goal 1</a></li>
                             <li className="goal-tab center-align"><a href="#goal4-2">Goal 2</a></li>
