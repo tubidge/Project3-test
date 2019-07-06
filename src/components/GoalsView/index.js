@@ -23,9 +23,9 @@ function GoalsView(props) {
                 <div id="test1">
                     <div className="col s2">
                         <ul className="goal-tabs">
-                            <li className="goal-tab center-align"><a href="#goal1-1">Goal 1</a></li>
-                            <li className="goal-tab center-align"><a href="#goal1-2">Goal 2</a></li>
-                            <li className="goal-tab center-align"><a href="#goal1-3">Goal 3</a></li>
+                            <a href="#goal1-1"><li className="goal-tab center-align">Goal 1</li></a>
+                            <a href="#goal1-2"><li className="goal-tab center-align">Goal 2</li></a>
+                            <a href="#goal1-3"><li className="goal-tab center-align">Goal 3</li></a>
                         </ul>
                     </div>
 
@@ -37,9 +37,9 @@ function GoalsView(props) {
                 <div id="test2">
                     <div className="col s2">
                         <ul className="goal-tabs">
-                            <li className="goal-tab center-align"><a href="#goal2-1">Goal 1</a></li>
-                            <li className="goal-tab center-align"><a href="#goal2-2">Goal 2</a></li>
-                            <li className="goal-tab center-align"><a href="#goal2-3">Goal 3</a></li>
+                            <a href="#goal1-1"><li className="goal-tab center-align">Goal 1</li></a>
+                            <a href="#goal1-2"><li className="goal-tab center-align">Goal 2</li></a>
+                            <a href="#goal1-3"><li className="goal-tab center-align">Goal 3</li></a>
                         </ul>
                     </div>
 
@@ -51,9 +51,9 @@ function GoalsView(props) {
                 <div id="test3">
                     <div className="col s2">
                         <ul className="goal-tabs">
-                            <li className="goal-tab center-align"><a href="#goal3-1">Goal 1</a></li>
-                            <li className="goal-tab center-align"><a href="#goal3-2">Goal 2</a></li>
-                            <li className="goal-tab center-align"><a href="#goal3-3">Goal 3</a></li>
+                            <a href="#goal1-1"><li className="goal-tab center-align">Goal 1</li></a>
+                            <a href="#goal1-2"><li className="goal-tab center-align">Goal 2</li></a>
+                            <a href="#goal1-3"><li className="goal-tab center-align">Goal 3</li></a>
                         </ul>
                     </div>
                 </div>
@@ -61,9 +61,9 @@ function GoalsView(props) {
                 <div id="test4">
                     <div className="col s2">
                         <ul className="goal-tabs">
-                            <li className="goal-tab center-align"><a href="#goal4-1">Goal 1</a></li>
-                            <li className="goal-tab center-align"><a href="#goal4-2">Goal 2</a></li>
-                            <li className="goal-tab center-align"><a href="#goal4-3">Goal 3</a></li>
+                            <a href="#goal1-1"><li className="goal-tab center-align">Goal 1</li></a>
+                            <a href="#goal1-2"><li className="goal-tab center-align">Goal 2</li></a>
+                            <a href="#goal1-3"><li className="goal-tab center-align">Goal 3</li></a>
                         </ul>
                     </div>
                 </div>

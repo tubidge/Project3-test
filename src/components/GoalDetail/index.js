@@ -1,5 +1,7 @@
 import React from "react";
+// import Milestone from "../Milestone";
 // import "./style.css";  Why doesn't this stylesheet do anything?
+
 
 function GoalDetail(props) {
     return (
@@ -17,10 +19,7 @@ function GoalDetail(props) {
                                 <p className="goal-subtitle">Milestones</p>
                             </div>
                             <ul className="goal-detail-sublist">
-                                <li>Milestone 1</li>
-                                <li>Milestone 2</li>
-                                <li>Milestone 3</li>
-                                <li>Milestone 4</li>
+                                {props.children}
                             </ul>
                             <button href="#" className="btn-small light-blue accent-4">
                                 Add Milestone
@@ -47,7 +46,7 @@ function GoalDetail(props) {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 
