@@ -21,7 +21,7 @@ function ProfileView() {
                     <div className="row">
                         <h5>User Info
                             <div id="button">
-                                <a href="#" className="btn-small">Edit Profile</a>
+                                <a href="#" className="btn-small light-blue accent-4">Edit Profile</a>
                             </div>
                         </h5>
                         <hr />

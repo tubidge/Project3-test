@@ -22,7 +22,7 @@ function GoalDetail(props) {
                                 <li>Milestone 3</li>
                                 <li>Milestone 4</li>
                             </ul>
-                            <button href="#" className="btn-small">
+                            <button href="#" className="btn-small light-blue accent-4">
                                 Add Milestone
                             </button>
                         </div>
@@ -39,7 +39,7 @@ function GoalDetail(props) {
                                 <li>Buddy 3</li>
                                 <li>Buddy 4</li>
                             </ul>
-                            <button href="#" className="btn-small">
+                            <button href="#" className="btn-small light-blue accent-4">
                                 Add Buddy
                             </button>
                         </div>

@@ -22,7 +22,7 @@ function ProfileEdit() {
                     <div className="row">
                         <h5>User Info
                             <div id="button">
-                                <a href="#" className="btn-small">Save Changes</a>
+                                <a href="#" className="btn-small light-blue accent-4">Save Changes</a>
                             </div>
                         </h5>
                         <hr />

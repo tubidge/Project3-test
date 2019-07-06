@@ -2,6 +2,28 @@
     padding: 80px 0 0 0;
 }
 
+.tabs .tab a {
+    color: black;
+}
+
+.tabs .tab a:hover {
+    color: #0288d1;
+}
+
+.tabs .tab a:focus.active {
+    color: #0288d1;
+    background-color: #ddf0ff; 
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: #0288d1;
+}
+
+.tabs .indicator {
+    background-color: #0288d1;
+}
+
 .goal-tab {
     margin: 50px 0 0 0;
 }
