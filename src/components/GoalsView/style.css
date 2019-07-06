@@ -17,3 +17,27 @@
 .tabs {
         background-color: rgb(246, 246, 246);
 }
+
+.card-title {
+    font-weight: 600 !important;
+}
+
+.goal-detail-sublist>li {
+    padding: 3px;
+}
+
+.goal-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.col-border {
+    border-right: 1px rgb(177, 174, 174) solid; 
+}
+
+.collapsible {
+    z-index: 0 !important;
+    box-shadow: none !important;
+    width: 80%;
+}
+

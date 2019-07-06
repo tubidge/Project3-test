@@ -1,5 +1,4 @@
 import React from "react";
-import GoalDetail from "../GoalDetail";
 import "./style.css";
 
 // // This code may be necessary for some Materialize animation/functionality

@@ -1,19 +1,20 @@
 import React from "react";
+// import "./style.css";  Why doesn't this stylesheet do anything?
 
-function GoalDetail() {
+function GoalDetail(props) {
     return (
         <div className="card goal-card">
             <div className="card-content">
-                <div className="card-title center-align"><b>Goal Title</b></div>
-                <div className="row goal-detail-row center-align">Due 01/01/2019</div>
-                <div className="row goal-detail-row center-align">Here is a description of your goal</div>
+                <div className="card-title center-align">{props.name}</div>
+                <div className="row goal-detail-row center-align">Due: {props.due}</div>
+                <div className="row goal-detail-row center-align">{props.desc}</div>
                 <div className="row" />
 
                 <div className="row">
-                    <div className="col s6">
+                    <div className="col s6 col-border">
                         <div className="row center-align">
                             <div className="goal-sub-title center-align">
-                                <b>Milestones</b>
+                                <p className="goal-subtitle">Milestones</p>
                             </div>
                             <ul className="goal-detail-sublist">
                                 <li>Milestone 1</li>
@@ -30,7 +31,7 @@ function GoalDetail() {
                     <div className="col s6">
                         <div className="row center-align">
                             <div className="goal-sub-title">
-                                <b>Buddies</b>
+                                <p className="goal-subtitle">Goal Buddies</p>
                             </div>
                             <ul className="goal-detail-sublist">
                                 <li>Buddy 1</li>
