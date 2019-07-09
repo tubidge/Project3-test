@@ -13,7 +13,8 @@ function Milestone(props) {
                     <span>Due: {props.due}</span>
                 </div>
             </p>
-
+            <br />
+            <hr />
         </li>
     )
 }
