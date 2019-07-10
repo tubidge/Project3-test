@@ -6,18 +6,18 @@ function Buddy(props) {
         <>
             <li className="goal-buddy">
                 <div className="col s6">
-                    <span className="buddy-name">Buddy 1</span>
+                    <p className="buddy-name">ReallyLongBuddyName 1</p>
                 </div>
                 <div className="col s6">
-                    <span><a href="#">View Profile</a></span>
+                    <p><a href="#">View Profile</a></p>
                 </div>
             </li>
             <li className="goal-buddy">
                 <div className="col s6">
-                    <span className="buddy-name">Buddy 1</span>
+                    <p className="buddy-name">Buddy Name 2</p>
                 </div>
                 <div className="col s6">
-                    <span><a href="#">View Profile</a></span>
+                    <p><a href="#">View Profile</a></p>
                 </div>
             </li>
         </>
