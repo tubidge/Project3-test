@@ -1,0 +1,10 @@
+.buddy-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.goal-buddy {
+    margin-bottom: 30px;
+}

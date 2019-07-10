@@ -3,9 +3,12 @@ import Navbar from "./components/Navbar";
 import ProfileView from "./components/ProfileView";
 import ProfileEdit from "./components/ProfileEdit";
 import GoalsView from "./components/GoalsView";
-import GoalsDetail from "./components/GoalDetail";
+import GoalCard from "./components/GoalCard";
 import Footer from "./components/Footer";
 import Milestone from "./components/Milestone";
+import Buddy from "./components/Buddy";
+import MilestoneColumn from "./components/MilestoneColumn";
+import BuddyColumn from "./components/BuddyColumn";
 
 class App extends Component {
   state = {
@@ -41,7 +44,118 @@ class App extends Component {
         "goalId": 17,
         "userId": 3
       }
-    ]
+    ],
+    currentGoals: {
+      "complete": [],
+      "incomplete": [
+        {
+          "id": 57,
+          "name": "Lose 25 lbs",
+          "category": "Fitness",
+          "dueDate": "2019-07-25",
+          "description": null,
+          "private": false,
+          "complete": false,
+          "milestones": {
+            "completed": [],
+            "incomplete": []
+          },
+          "buddy": {
+            "current": [],
+            "past": []
+          }
+        },
+        {
+          "id": 59,
+          "name": "Finish a book every week",
+          "category": "Education",
+          "dueDate": "2019-09-01",
+          "description": null,
+          "private": false,
+          "complete": false,
+          "milestones": {
+            "completed": [],
+            "incomplete": []
+          },
+          "buddy": {
+            "current": [],
+            "past": []
+          }
+        },
+        {
+          "id": 62,
+          "name": "Learn Muay Thai",
+          "category": "Fitness",
+          "dueDate": "2020-01-01",
+          "description": null,
+          "private": false,
+          "complete": false,
+          "milestones": {
+            "completed": [],
+            "incomplete": []
+          },
+          "buddy": {
+            "current": [],
+            "past": []
+          }
+        },
+        {
+          "id": 115,
+          "name": "Lose 25 lbs",
+          "category": "Fitness",
+          "dueDate": "2019-07-25",
+          "description": null,
+          "private": false,
+          "complete": false,
+          "milestones": {
+            "completed": [],
+            "incomplete": []
+          },
+          "buddy": {
+            "current": [],
+            "past": []
+          }
+        },
+        {
+          "id": 117,
+          "name": "Finish a book every week",
+          "category": "Education",
+          "dueDate": "2019-09-01",
+          "description": null,
+          "private": false,
+          "complete": false,
+          "milestones": {
+            "completed": [],
+            "incomplete": []
+          },
+          "buddy": {
+            "current": [],
+            "past": []
+          }
+        },
+        {
+          "id": 120,
+          "name": "Learn Muay Thai",
+          "category": "Fitness",
+          "dueDate": "2020-01-01",
+          "description": null,
+          "private": false,
+          "complete": false,
+          "milestones": {
+            "completed": [],
+            "incomplete": []
+          },
+          "buddy": {
+            "current": [],
+            "past": []
+          }
+        }
+      ]
+    },
+    "pastGoals": {
+      "complete": [],
+      "incomplete": []
+    }
   }
 
 
@@ -53,20 +167,25 @@ class App extends Component {
         {/* <ProfileView />
       <ProfileEdit /> */}
         <GoalsView>
-          <GoalsDetail name="Example Goal" due="01/01/2019" desc="Here is a description of your goal">
-            {this.state.incomplete.map(milestone => (
-              <Milestone
-                id={milestone.id}
-                key={milestone.id}
-                name={milestone.name}
-                frequency={milestone.frequency}
-                due={milestone.dueDate}
-              />
-            ))}
-          </GoalsDetail>
+          <GoalCard name="Example Goal" due="01/01/2019" desc="Here is a description of your goal">
+            <MilestoneColumn>
+              {this.state.incomplete.map(milestone => (
+                <Milestone
+                  id={milestone.id}
+                  key={milestone.id}
+                  name={milestone.name}
+                  frequency={milestone.frequency}
+                  due={milestone.dueDate}
+                />
+              ))}
+            </MilestoneColumn>
+            <BuddyColumn>
+              <Buddy />
+            </BuddyColumn>
+          </GoalCard>
         </GoalsView>
         <Footer />
-      </div>
+      </div >
     )
   }
 };
