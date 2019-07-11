@@ -92,7 +92,7 @@ class App extends Component {
             ]
           },
           "buddy": {
-            "current": [],
+            "current": ["JoeShmoe88", "Bunsofsteel", "Goalcrusher5000"],
             "past": []
           }
         },
@@ -210,7 +210,6 @@ class App extends Component {
                   due={milestone.dueDate}
                 />
               ))} */}
-
               {this.state.currentGoals.incomplete.map(goal => (
                 goal.milestones.incomplete.map(milestone => (
                   <Milestone
@@ -224,7 +223,12 @@ class App extends Component {
               ))}
             </MilestoneColumn>
             <BuddyColumn>
-              <Buddy />
+              {this.state.currentGoals.incomplete.map(goal =>
+                goal.buddy.current.map(buddy => (
+                  <Buddy
+                    name={buddy}
+                  />
+                )))}
             </BuddyColumn>
           </GoalCard>
         </GoalsView>

@@ -6,20 +6,20 @@ function Buddy(props) {
         <>
             <li className="goal-buddy">
                 <div className="col s6">
-                    <p className="buddy-name">ReallyLongBuddyName 1</p>
+                    <p className="buddy-name">{props.name}</p>
                 </div>
                 <div className="col s6">
                     <p><a href="#">View Profile</a></p>
                 </div>
             </li>
-            <li className="goal-buddy">
+            {/* <li className="goal-buddy">
                 <div className="col s6">
                     <p className="buddy-name">Buddy Name 2</p>
                 </div>
                 <div className="col s6">
                     <p><a href="#">View Profile</a></p>
                 </div>
-            </li>
+            </li> */}
         </>
     )
 }
