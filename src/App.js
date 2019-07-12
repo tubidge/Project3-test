@@ -9,6 +9,7 @@ import Milestone from "./components/Milestone";
 import Buddy from "./components/Buddy";
 import MilestoneColumn from "./components/MilestoneColumn";
 import BuddyColumn from "./components/BuddyColumn";
+import NoGoalsView from "./components/NoGoalsView";
 
 class App extends Component {
   state = {
@@ -190,28 +191,31 @@ class App extends Component {
   }
 
 
+  createCatArray = () => {
+    const catArray = [];
+    for (let i = 0; i < this.state.currentGoals.incomplete.length; i++) {
+      let currentCat = this.state.currentGoals.incomplete[i].category;
+      if (!catArray.includes(currentCat)) {
+        catArray.push(currentCat)
+      }
+    }
+    console.log(catArray);
+    return catArray;
+  }
+
   render() {
-    return (
-      <div>
-        <Navbar />
-        <hr />
-        {/* <ProfileView />
-      <ProfileEdit /> */}
-        <GoalsView>
-          <GoalCard name="Example Goal" due="01/01/2019" desc="Here is a description of your goal">
-            <MilestoneColumn>
-              {/* {this.state.incomplete.map(milestone => ( */}
-              {/* {this.state.currentGoals.incomplete[0].milestones.incomplete.map(milestone => (
-                <Milestone
-                  id={milestone.id}
-                  key={milestone.id}
-                  name={milestone.name}
-                  frequency={milestone.frequency}
-                  due={milestone.dueDate}
-                />
-              ))} */}
-              {this.state.currentGoals.incomplete.map(goal => (
-                goal.milestones.incomplete.map(milestone => (
+    if (this.state.currentGoals.incomplete) {
+      return (
+        <>
+          <Navbar />
+          <hr />
+          {/* <ProfileView />
+          <ProfileEdit /> */}
+          <GoalsView>
+            <GoalCard name="Example Goal" due="01/01/2019" desc="Here is a description of your goal">
+              <MilestoneColumn>
+                {/* {this.state.incomplete.map(milestone => ( */}
+                {/* {this.state.currentGoals.incomplete[0].milestones.incomplete.map(milestone => (
                   <Milestone
                     id={milestone.id}
                     key={milestone.id}
@@ -219,21 +223,39 @@ class App extends Component {
                     frequency={milestone.frequency}
                     due={milestone.dueDate}
                   />
-                ))
-              ))}
-            </MilestoneColumn>
-            <BuddyColumn>
-              {this.state.currentGoals.incomplete.map(goal =>
-                goal.buddy.current.map(buddy => (
-                  <Buddy
-                    name={buddy}
-                  />
-                )))}
-            </BuddyColumn>
-          </GoalCard>
-        </GoalsView>
+                ))} */}
+                {this.state.currentGoals.incomplete.map(goal => (
+                  goal.milestones.incomplete.map(milestone => (
+                    <Milestone
+                      id={milestone.id}
+                      key={milestone.id}
+                      name={milestone.name}
+                      frequency={milestone.frequency}
+                      due={milestone.dueDate}
+                    />
+                  ))
+                ))}
+              </MilestoneColumn>
+              <BuddyColumn>
+                {this.state.currentGoals.incomplete.map(goal =>
+                  goal.buddy.current.map(buddy => (
+                    <Buddy
+                      name={buddy}
+                    />
+                  )))}
+              </BuddyColumn>
+            </GoalCard>
+          </GoalsView>
+          <Footer />
+        </>
+      )
+    }
+    return (
+      <>
+        <Navbar />
+        <NoGoalsView />
         <Footer />
-      </div >
+      </>
     )
   }
 };
